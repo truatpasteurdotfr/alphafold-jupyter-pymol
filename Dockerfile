@@ -19,7 +19,11 @@ RUN apt-get update && apt-get -y install \
 	libglew-dev    \
 	libglm-dev     \
 	libnetcdf-dev  \
-	libmsgpack-dev 
+	libmsgpack-dev \
+	libxi6 \
+	libxinerama1 \
+	xkb-data \
+	libxkbcommon0
 
 RUN	git clone https://github.com/schrodinger/pymol-open-source.git && \
 	git clone https://github.com/rcsb/mmtf-cpp.git && \
