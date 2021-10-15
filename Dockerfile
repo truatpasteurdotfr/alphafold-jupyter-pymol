@@ -14,7 +14,7 @@ FROM  ghcr.io/truatpasteurdotfr/alphafold-jupyter:main
 
 # Install conda packages.
 ENV PATH="/opt/conda/bin:$PATH"
-RUN apt-get update && apt-get -y install 
+RUN apt-get update && apt-get -y install \
 	gcc            \
 	libglew-dev    \
 	libglm-dev     \
