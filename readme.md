@@ -1,5 +1,5 @@
 # adding opensource pymol to alphafold-jupyter
-
+[![Docker](https://github.com/truatpasteurdotfr/alphafold-jupyter-pymol/actions/workflows/main.yml/badge.svg)](https://github.com/truatpasteurdotfr/alphafold-jupyter-pymol/actions/workflows/main.yml)
 ## why?
 - because I like pymol :D
 
