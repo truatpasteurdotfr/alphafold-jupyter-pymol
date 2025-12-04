@@ -54,7 +54,6 @@ jobs:
           sudo rm -rf /opt/hostedtoolcache && echo misc deleted
           df -h
   
-    steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
