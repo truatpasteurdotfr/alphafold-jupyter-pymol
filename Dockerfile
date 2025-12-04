@@ -13,12 +13,6 @@
 FROM  ghcr.io/truatpasteurdotfr/alphafold-jupyter:main
 
 # Install conda packages.
-ENV PATH="/opt/conda/bin:$PATH"
-ENV CONDA_PLUGINS_AUTO_ACCEPT_TOS="yes"
-RUN conda install -qy -c conda-forge \
-      pymol-open-source \
-    && conda clean --all --force-pkgs-dirs --yes
-
 RUN apt-get update && \
 	DEBIAN_FRONTEND=noninteractive apt-get -y install \
 	libglew    \
@@ -49,4 +43,8 @@ RUN apt-get update && \
 	libxkbcommon-x11-0 \ 
 	libxrender1 \ 
 	mesa-utils 
+
+ENV PATH="/opt/conda/bin:$PATH"
+RUN conda install -qy pymol-open-source \
+    && conda clean --all --force-pkgs-dirs --yes
 
