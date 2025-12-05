@@ -13,17 +13,20 @@
 FROM  ghcr.io/truatpasteurdotfr/alphafold-jupyter:main
 
 # Install conda packages.
-ENV PATH="/opt/conda/bin:$PATH"
-RUN apt-get update && apt-get -y install \
-	gcc            \
-	libglew-dev    \
-	libglm-dev     \
-	libnetcdf-dev  \
-	libmsgpack-dev \
-	libxi6 \
-	libxinerama1 \
-	xkb-data \
-	libxkbcommon0
+RUN conda install -qy \
+        msgpack-cxx \
+        msgpack-c \
+        libgl-devel \
+        freetype \
+        glew \
+        glm \
+        libglu \
+        libnetcdf \
+        libpng \
+        libxml2-devel \
+        pmw \
+        pyqt \
+        xorg-libxfixes
 RUN	git clone https://github.com/schrodinger/pymol-open-source.git && \
 	git clone https://github.com/rcsb/mmtf-cpp.git && \
 	mv mmtf-cpp/include/mmtf* pymol-open-source/include/ && \
